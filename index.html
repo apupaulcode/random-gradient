@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Bound</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: blue;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script>
+        function randomBg(){
+            let x = Math.floor(Math.random()*256)
+            let y = Math.floor(Math.random()*256)
+            let z = Math.floor(Math.random()*256)
+            let color1='rgb('+x+','+y+','+z+')';
+
+            let a = Math.floor(Math.random()*256)
+            let b = Math.floor(Math.random()*256)
+            let c = Math.floor(Math.random()*256)
+            let color2='rgb('+a+','+b+','+c+')';
+
+            let deg=Math.floor(Math.random()*360)
+            
+
+            let grdient='linear-gradient('+deg+'deg,'+color1+','+color2+')'
+            document.body.style.background=grdient;
+        }
+        setInterval(() => {
+            randomBg();
+        }, 1000);
+    </script>
+</body>
+</html>
